@@ -46,15 +46,12 @@ app:
       value: 7rgjkvbjl487r2i1bvialvj2f4
     - name: clientSecret
       value: "{aes}AIUxkkmTE73hJrAj3oN5OMYQnC9j3NWNJNTXXAchJ97qyrr7MHYMmn1NEtxgHXFqmYp8VNEAYhB5hJS8voLsRYyfA/7GpDdznGs/DtYEqzlw"
-  # cloudwatch for metrics
-  metrics:
-    enabled: false
+  # cloudwatch observability
+  observability:
     cloudwatch:
-      arn: arn:aws:logs:region:account-id:destination:destination_name
-      metrics:
-        - a
-        - b
-        - c
+      roleArn: arn:aws:iam::439159788015:role/IBMAppFlowCloudWatchRole-don
+      logGroup: /ibm/appflow/don-appflow-tenant1-loggroup-7
+      region: us-east-1
   version: "884f852f-e4a1-40e7-9209-513fa8aeeda5"
 # probes
 # dynamic scaling
